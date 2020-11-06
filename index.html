@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- My css file-->
+    <link rel="stylesheet" type="text/css" href="./assets/style/stylesheet.css" />
+
+    <title>My Weather Dashboard</title>
+</head>
+
+<body>
+
+    <!--  "Navigation bar" holding title -->
+    <nav class="navigation">
+        <span>Weather Dashboard</span>
+    </nav>
+
+    <div class="Container">
+
+        <div class="row">
+            <div class="col-4">
+                <!-- searchBox -->
+                <div class="searchBox form-inline">
+                    <input class="inputCity form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btnCity btn btn-outline-success" type="submit">Search City</button>
+                </div>
+                <!--   <div class="card" style="width: 20rem; margin-top: 40px;">-->
+                <ul class="list-group list-group-flush" style="margin-top: 40px;width: max-content; margin-left: 150px;">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <!-- Main Weather Card will show current weather conditions-->
+            </div>
+            <div class="col-4">
+                <div class="weather">
+                    <div class="current">
+                        <div class="info">
+                            <div>&nbsp;</div>
+                            <div class="city"><small><small>CITY:</small></small>Dallas</div>
+                            <div class="temp">67&deg; <small>F</small></div>
+                            <div class="wind"><small><small>WIND:</small></small> 22 km/h</div>
+                            <div>&nbsp;</div>
+                        </div>
+                        <div class="icon">
+                            <span class="wi-day-sunny"></span>
+                        </div>
+                    </div>
+                    <div class="future">
+                        <div class="day">
+                            <h3>Mon</h3>
+                            <p><span class="wi-day-cloudy"></span></p>
+                        </div>
+                        <div class="day">
+                            <h3>Tue</h3>
+                            <p><span class="wi-showers"></span></p>
+                        </div>
+                        <div class="day">
+                            <h3>Wed</h3>
+                            <p><span class="wi-rain"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Details weather card - shows 5 day forcast -->
+        <div class="detailForecast row">
+
+            <div class="detailsCard card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <!-- render details -->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+            <div class="detailsCard card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <!-- render details -->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="detailsCard card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <!-- render details -->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="detailsCard card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <!-- render details -->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="detailsCard card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <!-- render details -->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
