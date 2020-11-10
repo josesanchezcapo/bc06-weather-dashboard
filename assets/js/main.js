@@ -1,43 +1,39 @@
-// get input city
+
+// definitions
+
+var cities = []; // Local storage array
 
 
-var cityCounter = 1;
+loadSearch();
 
-$('.btnCity').click(function() {
+$('.btnCity').click(function (event) {
 
-    var city = $('.inputCity').val()
-    console.log(city);
-    localStorage.setItem('city' + cityCounter, city);
-    cityCounter++;
-    console.log(cityCounter);
-    if (cityCounter > 4) {
-        cityCounter = 1;
-    }
+    event.preventDefault();
+    var city = $('.inputCity').val().trim();
 
+    cities.push(city)
+    localStorage.setItem('cities', JSON.stringify(cities));
 
+    loadSearch();
 
 });
 
 
-// render city to table and sabe to localstorage
+function loadSearch() {
 
-var list = '';
-var storageCity = '';
+    var searchCities = JSON.parse(localStorage.getItem('cities'));
 
-for (var i = 0; i < 4; i++) {
+   for (var i in searchCities) {
 
-    var displayCity = localStorage.getItem('city' + i, storageCity)
-
-    if (displayCity !== null) {
-
-        list = '<li class="list-group-item">' + localStorage.getItem('city' + i, displayCity) + '</li>';
+        var renderCities = '<li class="list-group-item">' + searchCities[i] + '</li>';
     }
 
-    $('.list-group').append(list);
-
-
+    $('.list-group').prepend(renderCities);
 
 }
+// render city to table and sabe to localstorage
+
+
 
 // make api call
 
